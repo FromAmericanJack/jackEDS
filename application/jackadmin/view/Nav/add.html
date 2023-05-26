@@ -1,0 +1,79 @@
+{layout name="public:layout" /}
+
+
+<h4 class="text-center text-danger">{$Think.lang.c_add}</h4>
+<form class="form-horizontal" action="{:url('nav/save')}" enctype="multipart/form-data" method="post">
+
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">{$Think.lang.c_name}:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="name" value="">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">{$Think.lang.nav_parent_nav}:</label>
+        <div class="col-sm-10">
+          <select name="parent_id" class="form-control" id="selectO">
+            <option value="0">{$Think.lang.nav_one_level}</option>
+            {volist name="navList" id="list0"}
+            <option value="{$list0.id}">{$list0.name}</option>
+            {/volist}            
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+      <label for="inputPassword5" class="col-sm-2 control-label">{$Think.lang.status}:</label>
+      <div class="col-sm-10">
+        <select name="status" class="form-control">
+            <option value="1">{$Think.lang.active}</option>
+            <option value="0">{$Think.lang.disable}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">{$Think.lang.c_sort}:</label>
+        <div class="col-sm-4">
+          <input type="number" class="form-control" name="sort" value="0">
+        </div>
+        <div class="help-block">The larger the number, the higher the ranking</div>
+    </div>
+    
+<hr>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">{$Think.lang.c_description}:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="description" value="">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">{$Think.lang.c_keywords}:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="keywords" value="">
+        </div>
+      </div>
+
+      
+      
+
+    <div class="form-group">
+      <label for="inputPassword5" class="col-sm-2 control-label">Other:</label>
+      <div class="col-sm-10">
+        <input type="text" name="other" class="form-control">
+      </div>
+    </div>
+
+    
+
+  <div class="form-group col-sm-10">
+    <label class="control-label col-sm-2"></label>
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-info">{$Think.lang.c_submit}</button>
+    </div>
+  </div> 
+
+</form>

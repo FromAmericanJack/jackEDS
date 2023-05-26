@@ -1,0 +1,46 @@
+    <div class="row">
+      <div class="col-md-12" style="padding-left: 0px;">
+              <nav class="navbar navbar-default navbar-inverse">
+                <div class="container-fluid">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{:url('index/index')}">{$title|default=""}</a>
+                  </div>
+
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+                    <ul class="nav navbar-nav navbar-left">                      
+                       <li><a href="" onclick="ssLeft();return false;" title="show/hidden"><span class="glyphicon glyphicon-transfer"></span></a></li>
+					   <li><a href="{:url('index/index')}" title="">{$Think.lang.jack_admin}</a></li>
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">        
+
+                   {if $Think.session.user_id} 
+                      <li><a href="/index.php">{$Think.lang.jack_home}</a></li>
+                      <li><a href="{:url('user/clearRunFile')}">{$Think.lang.jack_clear_cache}</a></li>     
+                      <li><a href="">{$Think.session.user_name}</a></li>
+                      <li><a href="{:url('user/logout')}">{$Think.lang.jack_logout}</a></li>
+                   {/if}
+
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+      </div>
+    </div> 
+    <script>
+
+      function ssLeft(){
+        $('#leftNav').toggle();
+        $('#main').toggleClass('col-md-10');
+      }
+
+    </script>           

@@ -1,0 +1,22 @@
+	<hr>
+	<div style="min-height: 50px" class="text-center bottom">
+
+		{$Think.lang.c_powered_by} <a href="https://github.com/AmerianJake/jackEDS">jackEDS</a>.
+
+	</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var url=window.location.pathname;		
+	    $("#leftNav li a").each(function(){	    	
+	    	var Nowhref=$(this).attr("href")
+	        if(url==Nowhref){
+	            $(this).attr("style","background:#ff0000;color:white;")
+	            return false
+	        }
+	    });
+	});    
+
+</script>
+</body>
+</html>
