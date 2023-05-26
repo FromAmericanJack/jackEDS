@@ -40,9 +40,9 @@ This program is developed based on thinkphp5.1. For more advanced configuration 
 
 At present, there are more and more rogue companies engaging in patent and software copyright infringement, which has seriously affected the development of open-source software. 
 
-Some companies even signed free open source agreements, allowing everyone to use them first and then start using copyright litigation to earn high profits. For example, there are Eolas, MPHJ, Uniloc From the United States; From China: Metinfo, DEDECMS; Visual China,....
+Some companies even signed free open source agreements, allowing everyone to use them first and then start using copyright litigation to earn high profits. For example, like Eolas, MPHJ, Uniloc, from the United States; From China: MetInfo, DEDECMS, Visual China, ....
 
-When we face such an unjust society, just people should not stand idly by, but should show courage to fight against it. The law is not omnipotent. Such companies have a large number of experienced lawyers, and it is very difficult for you to win the lawsuit.
+When we face such an unjust society, just people should not stand idly by, but should show courage to fight against it. The law is not omnipotent. 
 
 As a computer and a person with a sense of justice, what should I personally do? So I created this simple software, hoping to use it to expose such events and also to arouse people with conscience and a sense of justice to change this society and make it better together.
 
