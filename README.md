@@ -44,7 +44,7 @@ Some companies even promote free use, allowing everyone to use them first and th
 
 When we face such an unjust society, just people should not stand idly by, but should show courage to fight against it. The law is not omnipotent. 
 
-As a computer student and a person with a sense of justice, what should I personally do? So I created this simple software, hoping to use it to expose such events and also to arouse people with conscience and a sense of justice to change this society and make it better together.
+As a computer student and a person with a sense of justice, what should I personally do? So I created this simple software, hoping to use it to expose such events and also to arouse people with conscience and a sense of justice to change this society and make it better together.I hope to publish this software to expose relevant information about those who have lost their conscience, lawyers, and even businesses, so that everyone can stay away from harm and punish those who are evil.
 
 I am not a wealthy person and have not established my own official website. If you feel that you can support me, you can choose to donate or contact Er Kai. Having sufficient funds, it is still a distant goal to establish a website, improve the entire system, and even establish a dedicated 'anti patent copyright' rogue fund.
 
