@@ -7,8 +7,10 @@
 
 return [
     // Config
-    'website_name'=>'Website Name',
-    'website_logo'=>'Website Logo',
+    'website_name'     => 'Website Name',
+    'website_logo'     => 'Website Logo',
+    'website_email'     => 'Website Email',
+    'website_email_info'     => 'Mainly used for submission and contact',
 
     //menu
     'jack_admin'       => 'Jack Admin',
@@ -49,6 +51,10 @@ return [
     'c_operate'        => 'Operate',
     'c_delete'         => 'Delete',
     'c_basic_set'      => 'Basic Set',
+    'c_hits'           => 'Hits',
+    'c_recommend'      => 'Recommend',
+    'c_hot'            => 'Hot',
+    'c_sort'           => 'Sort',
 
     //nav
     'nav_del_exist'    => 'exist child nav or exist article in nav',
@@ -60,4 +66,3 @@ return [
     'a_pic'            => 'Picture',
 
 ];
-
