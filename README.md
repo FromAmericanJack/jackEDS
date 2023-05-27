@@ -40,7 +40,7 @@ This program is developed based on thinkphp5.1. For more advanced configuration 
 
 At present, there are more and more rogue companies engaging in patent and software copyright infringement, which has seriously affected the development of open-source software. 
 
-Some companies even signed free open source agreements, allowing everyone to use them first and then start using copyright litigation to earn high profits. For example, like Eolas, MPHJ, Uniloc, from the United States; From China: MetInfo, DEDECMS, Visual China, ....
+Some companies even promote free use, allowing everyone to use them first and then start using patent or copyright litigation to earn high profits. For example, Eolas, MPHJ, Uniloc,and so on from the United States; Even accurately collect user privacy information through program backdoors or feature codes, such as MetInfo, DEDECMS, Visual China, Tubao and so on from China.
 
 When we face such an unjust society, just people should not stand idly by, but should show courage to fight against it. The law is not omnipotent. 
 
