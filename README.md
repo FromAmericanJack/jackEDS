@@ -4,9 +4,9 @@ From: https://github.com/AmerianJake/jackEDS
 
 ## How to use it?
 0: Installation environment
-	PHP >= 5.6.0
-	PDO PHP Extension
-	MBstring PHP Extension
+PHP >= 5.6.0
+PDO PHP Extension
+MBstring PHP Extension
 
 1: Upload all files to your website root and set website running directory to '/public';
 
