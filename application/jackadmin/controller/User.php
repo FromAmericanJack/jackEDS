@@ -88,7 +88,17 @@ class User extends Common
 
 	public function clearrunfile()
 	{
-		
+		$fiels = scandir(env('runtime_path').'temp');
+		foreach ($fiels as $k => $v) {
+			if (is_file(env('runtime_path').'temp/'.$v)) {
+				$res  = unlink(env('runtime_path').'temp/'.$v);
+			}			
+		}
+		if ($res) {
+			$this->success(lang('success'));
+		}
+		$this->error(lang('error'));
+
 	}
 
 
