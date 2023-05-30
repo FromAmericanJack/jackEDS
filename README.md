@@ -3,7 +3,7 @@ Welcome to use JackEDS！The software is compact, flexible, simple and practical
 From: https://github.com/AmerianJake/jackEDS 
 
 ## How to use it?
-0: Installation environment
+0: Installation environment:
 
 	PHP >= 5.6.0
 	PDO PHP Extension
