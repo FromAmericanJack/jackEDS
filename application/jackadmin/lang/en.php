@@ -17,12 +17,13 @@ return [
     'jack_home'        => 'Home',
     'jack_clear_cache' => 'Clear cache',
     'jack_logout'      => 'Logout',
-    'jack_left_menu1'  => 'Manage Menu1',
+    'jack_left_menu1'  => 'Content Manage',
+    'jack_left_menu2'  => 'System Config',
     'jack_left_user'   => 'User',
-    'jack_nav'         => 'Nav',
+    'jack_nav'         => 'Navigation',
     'jack_article'     => 'Article',
-    'jack_lang'        => 'Lang',
-    'jack_config'      => 'Config',
+    'jack_lang'        => 'Language',
+    'jack_basic_set'      => 'Basic Set',
 
     //common
     'c_success'        => 'Success',
