@@ -2,6 +2,8 @@
 Welcome to use JackEDS！The software is compact, flexible, simple and practical. Can be used for exposure platforms, blogs, article management, and enterprise CMS, supporting secondary development. Under the GPL agreement, you can also delete the copyright of the HTML page at will without any responsibility.
 From: https://github.com/AmerianJake/jackEDS 
 
+
+
 ## How to use it?
 0: Installation environment:
 
