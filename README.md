@@ -4,7 +4,7 @@ From: https://github.com/AmerianJake/jackEDS
 
 
 
-## How to use it?
+## How to use it? 
 0: Installation environment: 
 
 	PHP >= 5.6.0
