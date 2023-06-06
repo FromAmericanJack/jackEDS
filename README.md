@@ -11,15 +11,6 @@ From: https://github.com/FromAmericanJack/jackEDS
 	PDO PHP Extension
 	MBstring PHP Extension
 
-<<<<<<< HEAD
-## Installation environment
-PHP >= 5.6.0
-PDO PHP Extension
-MBstring PHP Extension
-
-## How to use it?
-=======
->>>>>>> master
 1: Upload all files to your website root and set website running directory to '/public';
 
 2: Import the 'data/jack.sql' file into your database and set '/config/database.php' to connect to the database;
