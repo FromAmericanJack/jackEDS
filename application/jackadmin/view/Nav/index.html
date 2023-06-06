@@ -1,0 +1,49 @@
+{//from https://github.com/FromAmericanJack/jackEDS  @license https://www.gnu.org/licenses/gpl-3.0.html GNU GENERAL PUBLIC LICENSE}
+
+{layout name="public:layout" /}
+<h4 class="text-success text-center">Nav Manage</h4>
+<span><a class="btn btn-default" href="{:url('nav/add')}">Add One</a></span>
+
+<table class="table table-bordered table-striped table-hover">
+	<thead>
+		<tr  class="text-primary">
+			<td>ID</td>
+			<td>Name</td>
+			<td>Sort</td>
+			<td>Status</td>
+			<td colspan="2">Opt</td>
+		</tr>
+	</thead>
+	<tbody>
+	{volist name="navList" id="nav" empty="$empty"}
+		<tr>
+			<td>{$nav.id}</td>
+			<td>{$nav.name}</td>
+			<td>{$nav.sort}</td>
+
+			<td>
+			{eq name="$nav.status" value="1"}
+			<span style="color:green">Active</span>
+			{else/}
+			<span style="color:red">Disable</span>
+			{/eq}			
+			</td>
+
+			<td><a href="" onclick="dele({$nav.id});return false;">Delete</a></td>
+			<td><a href="{:url('nav/amend',['id'=>$nav.id])}">{$Think.lang.c_edit}</a></td>
+
+		</tr>
+	{/volist}
+	</tbody>	
+</table>
+
+<div class="text-center">{$pageList|raw}</div>
+<script>
+	function dele(id)
+	{
+		if(confirm('are you real delete?Not recover') == true){
+			window.location.href = "{:url('nav/des')}"+"?id="+id;		
+		}
+	}
+	
+</script>

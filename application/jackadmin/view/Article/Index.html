@@ -1,0 +1,84 @@
+{//from https://github.com/FromAmericanJack/jackEDS  @license https://www.gnu.org/licenses/gpl-3.0.html GNU GENERAL PUBLIC LICENSE}
+
+{layout name="public:layout" /}
+
+<h4 class="text-success text-center">{$Think.lang.jack_article} {$Think.lang.c_list}</h4>
+
+<form action="{:url('article/index')}" method="post" class="form-horizontal" >
+    <div class="form-group col-sm-2">
+        <div class="col-sm-2">
+          <span><a class="btn btn-default" href="{:url('article/add')}">{$Think.lang.c_add}</a></span>
+        </div>
+    </div>
+    <div class="form-group col-sm-10">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" name="search" value="" placeholder="ID/title">
+        </div>
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-info">{$Think.lang.c_search}</button>
+        </div>
+    </div>    
+</form>
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr class="text-primary">
+            <td>ID</td>
+            <td>{$Think.lang.a_title}</td>
+            <td>{$Think.lang.c_hits}</td>
+            <td>{$Think.lang.c_hot}</td>            
+            <td>{$Think.lang.c_recommend}</td>
+            <td>{$Think.lang.c_status}</td>
+            <td colspan="2">{$Think.lang.c_operate}</td>
+        </tr>
+    </thead>
+    <tbody>
+    {volist name="articleList" id="article" empty="$empty"}
+        <tr>
+            <td>{$article.id}</td>
+            <td>{$article.title}</td>
+            <td>
+                {$article.hits}
+            </td>
+            <td>
+                {if $article.hot==1}
+                    Yes
+                {else /}
+                   <span class="text-danger">No</span>
+                {/if}       
+            </td>            
+            <td>
+                {if $article.recommend==1}
+                    Yes
+                {else /}
+                   <span class="text-danger">No</span>
+                {/if}
+
+            </td>
+            <td>
+                {if $article.status==1}
+                    {$Think.lang.c_active}
+                {else /}
+                   <span class="text-danger">{$Think.lang.c_disable}</span>
+                {/if}        
+            </td>
+
+            <td><a href="" onclick="dele({$article.id});return false;">{$Think.lang.c_delete}</a></td>
+            <td><a href="{:url('article/amend',['id'=>$article.id])}">{$Think.lang.c_edit}</a></td>
+
+        </tr>
+    {/volist}
+    </tbody>    
+</table>
+
+<div class="text-center">{$articleList|raw}</div>
+<script>
+    function dele(id)
+    {
+        if(confirm('are you real delete?Not recover') == true){
+            window.location.href = "{:url('article/des')}"+"?id="+id;       
+        }
+    }
+    
+</script>

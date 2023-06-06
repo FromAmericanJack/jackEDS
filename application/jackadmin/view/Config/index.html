@@ -1,0 +1,86 @@
+{//from https://github.com/FromAmericanJack/jackEDS  @license https://www.gnu.org/licenses/gpl-3.0.html GNU GENERAL PUBLIC LICENSE}
+
+{layout name="public:layout" /}
+
+<!--baidu js-->
+<script type="text/javascript" charset="utf-8" src="/static/common/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/common/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript">
+    var ue = UE.getEditor('editor');
+</script>
+<!-- baidu js -->
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#menu">{$Think.lang.c_basic_set}</a></li>
+    <li><a data-toggle="tab" href="#menu1">SEO</a></li>
+    <li><a data-toggle="tab" href="#menu2">Menu3</a></li>
+  </ul>
+
+<form class="form-horizontal" id="form_data" action="{:url('config/save')}" enctype="multipart/form-data" method="post" style="margin-top: 15px;">
+
+  <div class="tab-content">
+    <!-- tab1 -->
+    <div id="menu" class="tab-pane fade in active">     
+        
+           
+          <div class="form-group">
+            <label class="col-sm-2 control-label">{$Think.lang.website_name}:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="website_name" value="{$website_name}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">{$Think.lang.website_email}:</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="website_email" value="{$website_email}">
+            </div>
+            <div class="help-block">{$Think.lang.website_email_info}</div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">{$Think.lang.website_logo}:</label>
+            <div class="col-sm-4">
+              <img src="{$website_logo}" style="max-width: 50px;">
+              <input type="file" class="form-control" name="website_logo" value="">
+            </div>
+            <div class="help-block">
+                Support:jpg,png,gif; max:100kb.
+            </div>
+          </div>         
+
+    </div>
+    <!-- tab2 -->
+    <div id="menu1" class="tab-pane fade">
+
+       <div class="form-group">
+        <label class="col-sm-2 control-label">{$Think.lang.c_description}:</label>
+        <div class="col-sm-10">
+          <textarea type="text" class="form-control" name="website_seo[description]" rows="3">{$website_seo.description}</textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">{$Think.lang.c_keywords}:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="website_seo[keywords]" value="{$website_seo.keywords}">
+        </div>
+        <div class="help-block">3-8 words.</div>
+      </div>
+
+    </div>
+
+    <!-- tab3 -->
+    <div id="menu2" class="tab-pane fade">
+      
+
+    </div>
+
+  </div>
+  <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">{$Think.lang.c_submit}</button>
+      </div>
+  </div>
+
+</form>

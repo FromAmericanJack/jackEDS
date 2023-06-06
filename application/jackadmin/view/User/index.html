@@ -1,0 +1,48 @@
+{//from https://github.com/FromAmericanJack/jackEDS  @license https://www.gnu.org/licenses/gpl-3.0.html GNU GENERAL PUBLIC LICENSE}
+
+{layout name="public:layout" /}
+<h4 class="text-success text-center">{$Think.lang.jack_left_user}</h4>
+<span><a class="btn btn-default" href="{:url('user/add')}">{$Think.lang.c_add}</a></span>
+
+<table class="table table-bordered table-striped table-hover text-center">
+	<thead>
+		<tr class="text-primary">
+			<td>ID</td>
+			<td>{$Think.lang.c_name}</td>
+			<td>{$Think.lang.c_status}</td>
+			<td colspan="2">{$Think.lang.c_operate}</td>
+		</tr>
+	</thead>
+	<tbody>
+	{volist name="userList" id="user" empty="$empty"}
+		<tr>
+			<td>{$user.id}</td>
+			<td>{$user.name}</td>
+
+			<td>
+			{eq name="$user.status" value="1"}
+			<span style="color:green">Active</span>
+			{else/}
+			<span style="color:red">Disable</span>
+			{/eq}			
+			</td>
+
+			<td><a href="" onclick="dele({$user.id});return false;">{$Think.lang.c_delete}</a></td>
+			<td><a href="{:url('user/amend',['id'=>$user.id])}">{$Think.lang.c_edit}</a></td>
+
+		</tr>
+	{/volist}
+	</tbody>	
+</table>
+
+<div class="text-center">{$userList|raw}</div>
+
+<script>
+	function dele(id)
+	{
+		if(confirm('are you real delete?Not recover') == true){
+			window.location.href = "{:url('user/des')}"+"?id="+id;		
+		}
+	}
+	
+</script>

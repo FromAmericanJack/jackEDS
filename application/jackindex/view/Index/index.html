@@ -1,0 +1,74 @@
+{//**
+ * from https://github.com/FromAmericanJack/jackEDS 
+ * @license https://www.gnu.org/licenses/gpl-3.0.html GNU GENERAL PUBLIC LICENSE
+ *//}
+
+{layout name="public:layout" /}
+<div class="jumbotron">
+    <h1>{$Think.lang.welecom}</h1>
+    <p>{$Think.lang.welecom_small}</p>
+  </p>
+</div>
+
+{//hot list}
+<div class="page-header">
+    <h3  class="text-warning text-center"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;{$Think.lang.hot_list}<span></span>
+        <small>{$Think.lang.hot_list_child}</small>
+    </h3>
+</div>
+
+{volist name="hotList" id="hot_list"}
+<div class="media">
+  <div class="media-left media-top">
+    <img decoding="async" src="{$hot_list.pics|default=$Think.lang.default_img}" class="media-object" style="width:60px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><small><span class="glyphicon glyphicon-random"></span></small>&nbsp;<a href="{:url('artdetail/index',['id'=>$hot_list.id])}" title="{$Think.lang.read_more}">{$hot_list.title}</a></h4>
+    <p><small><b>{$Think.lang.hits}</b>{$Think.lang.hits}:{$hot_list.hits} <b>{$Think.lang.update}</b> :{$hot_list.update_time|date="Y-m-d"} </small></p>
+    <p>{$hot_list.description|substr=0,150}</p>
+  </div>
+</div>
+{/volist}
+
+
+{//hits list}
+<div class="page-header">
+    <h3 class="text-danger text-center"><span class="glyphicon glyphicon-hand-right"></span><span class="glyphicon glyphicon-hand-right"></span><span class="glyphicon glyphicon-hand-right"></span>&nbsp;&nbsp;&nbsp;{$Think.lang.hits_list}<span></span>
+        <small>{$Think.lang.hits_list_child}</small>
+    </h3>
+</div>
+
+{volist name="hitsList" id="hits_list"}
+<div class="media">
+  <div class="media-left media-top">
+    <img decoding="async" src="{$hits_list.pics|default=$Think.lang.default_img}" class="media-object" style="width:60px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><small><span class="glyphicon glyphicon-random"></span></small>&nbsp;<a href="{:url('artdetail/index',['id'=>$hits_list.id])}" title="{$Think.lang.read_more}">{$hits_list.title}</a></h4>
+    <p><small><b>{$Think.lang.hits}</b>{$Think.lang.hits}:{$hits_list.hits} <b>{$Think.lang.update}</b> :{$hits_list.update_time|date="Y-m-d"} </small></p>
+    <p>{$hits_list.description|substr=0,150}</p>
+  </div>
+</div>
+{/volist}
+
+{//recommend list}
+<div class="page-header">
+    <h3 class="text-warning text-center"><span class="glyphicon glyphicon-flag"></span><span class="glyphicon glyphicon-flag"></span><span class="glyphicon glyphicon-flag"></span>&nbsp;&nbsp;&nbsp;{$Think.lang.recommend_list}<span></span>
+        <small>{$Think.lang.recommend_list_child}</small>
+    </h3>
+</div>
+
+{volist name="recommendList" id="recommend_list"}
+<div class="media">
+  <div class="media-left media-top">
+    <img decoding="async" src="{$recommend_list.pics|default=$Think.lang.default_img}" class="media-object" style="width:60px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><small><span class="glyphicon glyphicon-random"></span></small>&nbsp;<a href="{:url('artdetail/index',['id'=>$recommend_list.id])}" title="{$Think.lang.read_more}">{$recommend_list.title}</a></h4>
+    <p><small><b>{$Think.lang.hits}</b>{$Think.lang.hits}:{$recommend_list.hits} <b>{$Think.lang.update}</b> :{$recommend_list.update_time|date="Y-m-d"} </small></p>
+    <p>{$recommend_list.description|substr=0,150}</p>
+  </div>
+</div>
+{/volist}
+
+
